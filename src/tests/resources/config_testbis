@@ -1,0 +1,5 @@
+instance= instance_domain
+player =player command with arguments
+use-raw-url = false 
+torrent-downloader = transmission-cli
+max-hist-lines = 100

@@ -1,0 +1,7 @@
+before_script:
+        - apt update && apt install rapidjson-dev libboost-all-dev catch -y 
+
+peertube-viewer:
+        script:
+                - make
+                - make test-catch-v1

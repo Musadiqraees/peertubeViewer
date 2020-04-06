@@ -1,0 +1,72 @@
+.\" Manpage for peertube-viewer
+
+.TH man  "2019" "0.6.3" "peertube-viwer manpage"
+
+.SH NAME
+peertube-viewer a simple peertube cli browser
+
+.SH SYNOPSIS
+peertube-viewer [--player=player][--instance=instance][initial query or video url]
+
+
+.SH DESCRIPTION
+Allows you to search videos from a peertube instance with a similar interface to youtube-viewer
+It uses the readline library so it can use vim bindings if set editing-mode vi is in ~/.inputrc
+
+.B FEATURES 
+
+.B search history 
+
+.B instance selection
+
+.B instance blacklist and whitelist
+ 
+.B quality selection
+
+If you put a file in ~/.cache/peertube-viewer/blacklist, each line will be treated as a domain name corresponding to a blacklisted instance.
+(Ex : bad.com)
+The videos from this instance will not be shown in the search results and the video will refuse to be played.
+However, if the first line is #whitelist, only videos from the listed domains will be played.
+
+
+.SH OPTIONS
+
+.B --instance
+overrides the instance set in the config file.
+
+.B --[player/torrent-downloader]
+overrides the player/torrent client set in the config file.
+
+.B --[player/torrent-downloader]-args
+overrides the player/torrent downloader arguments set in the config file.
+
+.B --use-raw-url
+Will pass the url to the seed file instead of the web url to the player.
+This might be neccessary for some players(vlc) but some don't need it and will even extract some information from it to display in their GUI.
+
+.B --select-quality, -s
+Will prompt you to chose the video quality when playing a video
+
+.B --help ,-h
+Display basic help.
+
+.B --version, -v
+Display version number and exit
+
+
+
+.SH REPORTING BUGS
+
+Gitlab issue tracker : https://gitlab.com/SostheneGuedon/peertube-viewer/issues
+
+.SH AUTHOR
+
+Written by Sosthène Guédon
+
+
+.SH COPYRIGHT
+
+Copyright © 2019 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+
+This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law
+

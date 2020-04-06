@@ -1,0 +1,6 @@
+instance= instance_domain
+player =player
+player-args =command with --arguments=true
+use-raw-url = true
+torrent-downloader = transmission-cli
+torrent-downloader-args= trans-args
