@@ -39,7 +39,7 @@ string curl_request(string url)
         curl_easy_setopt(curl,CURLOPT_URL,url.c_str());
         curl_easy_setopt(curl,CURLOPT_WRITEFUNCTION,write_data);
         curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0L);
-        curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, 2L);
+        curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, 0L);
         curl_easy_setopt(curl,CURLOPT_WRITEDATA,&return_stream);
         CURLcode returnValue = curl_easy_perform(curl);
 
